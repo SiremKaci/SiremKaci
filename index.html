@@ -12,7 +12,7 @@
 			a { color: #00d4ff; }
 			a:hover { color: #ff6b6b; }
 			h1, h2 { color: #00d4ff; text-shadow: 0 0 10px #00d4ff60; }
-			.major { border-bottom-color: #00d4ff; }
+			.major { border-bottom-color: #100f16; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -37,8 +37,48 @@
 				</ul>
 				<ul class="icons">
 					<li><a href="https://github.com/SiremKaci" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/[ton-profil-linkedin]" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="mailto:[ton@email.com]" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://www.linkedin.com/in/sirem-kaci-6563b43b0/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li>
+  <a href="#" 
+     onclick="copyEmail(event)" 
+     class="icon solid fa-envelope" 
+     title="Copier mon email">
+    <span class="label">Email</span>
+  </a>
+</li>
+
+<script>
+function copyEmail(e) {
+  e.preventDefault(); // empêche le comportement par défaut du lien
+  
+  const email = "siremaha@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    // Message temporaire
+    const msg = document.createElement("div");
+    msg.textContent = "Adresse mail copiée !";
+    msg.style.position = "fixed";
+    msg.style.bottom = "20px";
+    msg.style.right = "20px";
+    msg.style.background = "#00d4ff";
+    msg.style.color = "white";
+    msg.style.padding = "12px 20px";
+    msg.style.borderRadius = "8px";
+    msg.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+    msg.style.zIndex = "9999";
+    msg.style.fontSize = "15px";
+    document.body.appendChild(msg);
+
+    // Disparaît après 2,5 secondes
+    setTimeout(() => {
+      msg.style.opacity = "0";
+      setTimeout(() => msg.remove(), 500);
+    }, 2500);
+  }).catch(err => {
+    console.error("Erreur copie : ", err);
+    alert("Impossible de copier, sélectionne manuellement : siremaha@gmail.com");
+  });
+}
+</script>
 				</ul>
 			</nav>
 
@@ -46,38 +86,58 @@
 				<article class="post featured">
 					<header class="major">
 						<span class="date">Février 2026</span>
-						<h2><a href="https://github.com/SiremKaci/[repo-fraud]">Détection de Fraude Carte de Crédit</a></h2>
-						<p>Dataset déséquilibré (~0.17%) → SMOTE/SMOTETomek + XGBoost + SHAP.<br />
-						Résultats : AP score élevé, ROC-AUC >0.98, réduction faux négatifs.</p>
+						<h2><a href="https://github.com/SiremKaci/[repo-fraud]">Bienvenue sur mon portfolio</a></h2>
+						<p>Je transforme des données complexes en solutions claires et impactantes<br />
+						Découvrez mes projets concrets, du machine learning interprétable à la détection intelligente de fraudes et anomalies en finance et santé.</p>
 					</header>
-					<a href="https://github.com/SiremKaci/[repo-fraud]" class="image main"><img src="assets/images/fraud-plot.png" alt="PR Curve" /></a>
+					<a href="Multimedia.jpg" class="image main">
+    <img src="Multimedia.jpg" alt="PR Curve" style="max-width: 300px; height: auto; display: block; margin: 20px auto;">
+</a>
 					<ul class="actions special">
-						<li><a href="https://github.com/SiremKaci/[repo-fraud]" class="button large">Voir repo</a></li>
+						<li><a href="https://github.com/SiremKaci/SiremKaci.github.io" class="button large">Voir repo</a></li>
 					</ul>
-				</article>
+	<article>
+    <header>
+        <span class="date">Décembre 2025</span>
+        <h2><a href="https://github.com/SiremKaci/Glaucoma-detection">Modélisation des messages légitimes et frauduleux</a></h2>
+    </header>
+    
+    <div style="text-align: center; margin: 2em 0;">
+        <a href="Email_Silk.svg.png" class="image fit">
+            <img src="Email_Silk.svg.png" 
+                 alt="Illustration email légitime vs spam" 
+                 style="max-width: 300px; width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				 Icône email – Source : <a href="https://commons.wikimedia.org/wiki/File:Email_Silk.svg" target="_blank">Wikimedia Commons</a> (Silk Icons set), licence CC-BY 2.5
+        </a>
+        <p style="margin-top: 1em; font-style: italic; color: #888; font-size: 0.9em;">
+            
+        </p>
+    </div>
 
-				<section class="posts">
-					<article>
+    <p>Nettoyage texte, vectorisation, modèles classiques + éventuellement embeddings / NN simples.</p>
+    
+    <ul class="actions special">
+        <li><a href="https://github.com/SiremKaci/credit-card-fraud-detection" class="button">Voir projet</a></li>
+    </ul>
+</article>
 						<header>
-							<span class="date">Décembre 2025</span>
-							<h2><a href="https://github.com/SiremKaci/[repo-crime]">Analyse Criminalité Los Angeles</a></h2>
-						</header>
-						<a href="https://github.com/SiremKaci/[repo-crime]" class="image fit"><img src="assets/images/crime-heatmap.png" alt="Heatmap" /></a>
-						<p>EDA spatio-temporelle, tests stats (Shapiro/ANOVA), heatmaps Plotly/Folium, insights quartiers/heures.</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/SiremKaci/[repo-crime]" class="button">Voir projet</a></li>
-						</ul>
-					</article>
-					<!-- Duplique cet <article> pour Glaucome, Spam/Ham, etc. -->
-					<article>
-						<header>
-							<span class="date">Janvier 2026</span>
-							<h2><a href="#">Détection Glaucome</a></h2>
-						</header>
-						<a href="#" class="image fit"><img src="assets/images/glaucoma.png" alt="Glaucome" /></a>
-						<p>Classification DL (PyTorch/Keras), augmentations Albumentations, interprétabilité.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button">Voir projet</a></li>
+						<span class="date">Janvier 2026</span>
+        <h2><a href="#">Détection Glaucome</a></h2>
+    </header>
+    <div style="text-align: center; margin: 2em 0;">
+        <a href="Glaukompapille2.jpg" class="image fit">
+            <img src="Glaukompapille2.jpg" 
+                 alt="Glaukompapille2.jpg" 
+                 style="max-width: 300px; width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </a>>
+        </a>
+        <p style="margin-top: 1em; font-style: italic; color: #888; font-size: 0.9em;">
+             <a href="https://commons.wikimedia.org/wiki/File:Glaukompapille2.jpg" target="_blank">Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC-BY-SA 3.0</a>.
+        </p>
+    </div>
+    <p>Classification DL (PyTorch/Keras), augmentations Albumentations, interprétabilité.</p>
+    <ul class="actions special">
+        <li><a href="https://github.com/SiremKaci/Glaucoma-detection" class="button">Voir projet</a></li>
 						</ul>
 					</article>
 					<!-- Ajoute les autres -->
@@ -87,18 +147,18 @@
 			<footer id="footer">
 				<section class="split contact">
 					<section class="alt">
-						<h3>Localisation</h3>
-						<p>Ontario, Canada</p>
+						<h3>Localisation </h3>
+						<p>  Ontario, Canada</p>
 					</section>
 					<section>
 						<h3>Email</h3>
-						<p><a href="mailto:[ton@email.com]">[siremaha@gmail.com]</a></p>
+						<p><a href="siremaha@gmail.com">[siremaha@gmail.com]</a></p>
 					</section>
 					<section>
 						<h3>Social</h3>
 						<ul class="icons alt">
 							<li><a href="https://github.com/SiremKaci" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/[ton-profil]" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sirem-kaci-6563b43b0/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						</ul>
 					</section>
 				</section>
